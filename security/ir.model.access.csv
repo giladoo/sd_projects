@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sd_projects_projects_manager,sd_projects.projects,model_sd_projects_projects,sd_projects.group_sd_projects_admins,1,1,1,1
