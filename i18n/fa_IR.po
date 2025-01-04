@@ -1,0 +1,105 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sd_projects
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-04 14:22+0000\n"
+"PO-Revision-Date: 2025-01-04 17:54+0330\n"
+"Last-Translator: Arash Homayounfar <homayounfar@msn.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
+"Language: fa_IR\n"
+"X-Generator: Poedit 2.2\n"
+
+#. module: sd_projects
+#: model:res.groups,name:sd_projects.group_sd_projects_admins
+msgid "Administrators"
+msgstr ""
+
+#. module: sd_projects
+#: model:ir.model.fields,field_description:sd_projects.field_sd_projects_projects__client
+msgid "Client"
+msgstr "کارفرما"
+
+#. module: sd_projects
+#: model:ir.model.fields,field_description:sd_projects.field_sd_projects_projects__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: sd_projects
+#: model:ir.model.fields,field_description:sd_projects.field_sd_projects_projects__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: sd_projects
+#: model:ir.model.fields,field_description:sd_projects.field_sd_projects_projects__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: sd_projects
+#: model:ir.model,name:sd_projects.model_hr_employee
+msgid "Employee"
+msgstr "کارمند"
+
+#. module: sd_projects
+#: model:ir.model.fields,field_description:sd_projects.field_sd_projects_projects__id
+msgid "ID"
+msgstr ""
+
+#. module: sd_projects
+#: model:ir.model.fields,field_description:sd_projects.field_sd_projects_projects__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: sd_projects
+#: model:ir.model.fields,field_description:sd_projects.field_sd_projects_projects__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: sd_projects
+#: model:ir.model.fields,field_description:sd_projects.field_sd_projects_projects__name
+msgid "Name"
+msgstr "نام"
+
+#. module: sd_projects
+#: model:ir.model.fields,field_description:sd_projects.field_hr_employee__project_name
+msgid "Project Name"
+msgstr "نام پروژه"
+
+#. module: sd_projects
+#: model:ir.model.fields,field_description:sd_projects.field_sd_projects_projects__project_no
+msgid "Project No"
+msgstr "شماره پروژه"
+
+#. module: sd_projects
+#: model:ir.actions.act_window,name:sd_projects.project_window_action
+#: model:ir.model,name:sd_projects.model_sd_projects_projects
+msgid "Projects"
+msgstr "پروژه ها"
+
+#. module: sd_projects
+#: model:ir.module.category,name:sd_projects.module_category_sd_projects
+#: model:ir.ui.menu,name:sd_projects.projects_nemu
+msgid "SD Projects"
+msgstr "پروژه های SD"
+
+#. module: sd_projects
+#: model:ir.model.fields,field_description:sd_projects.field_sd_projects_projects__start_date
+msgid "Start Date"
+msgstr "تاریخ شروع"
+
+#. module: sd_projects
+#: model:res.groups,name:sd_projects.group_sd_projects_users
+msgid "Users"
+msgstr "کاربران"
+
+#. module: sd_projects
+#: model:ir.module.category,description:sd_projects.module_category_sd_projects
+msgid "requests."
+msgstr "درخواست ها"
