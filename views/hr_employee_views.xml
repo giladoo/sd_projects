@@ -10,4 +10,10 @@
             </xpath>
         </field>
     </record>
+
+        <menuitem
+            id="projects_nemu"
+            name="SD Projects"
+            parent="hr.menu_config_employee"
+            action="sd_projects.project_window_action"/>
 </odoo>
