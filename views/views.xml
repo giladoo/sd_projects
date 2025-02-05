@@ -26,7 +26,7 @@
     <record id="project_window_action" model="ir.actions.act_window">
         <field name="name">Projects</field>
         <field name="res_model">sd_projects.projects</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
     </record>
     <menuitem
             id="projects_nemu"
