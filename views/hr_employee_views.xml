@@ -20,7 +20,7 @@
                 <field name="project_name" icon="fa-sitemap" enable_counters="1"/>
             </xpath>
             <xpath expr="//field[@name='department_id']" position="after">
-                <field name="work_location_id" icon="fa-sitemap" enable_counters="1"/>
+                <field name="work_location_id" icon="fa-building-o" enable_counters="1"/>
             </xpath>
         </field>
     </record>
