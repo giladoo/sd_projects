@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="view_employee_form" model="ir.ui.view">
+    <record id="sd_projects_view_employee_form_inherit" model="ir.ui.view">
         <field name="name">hr.employee.view.form.inherit.employee.relatives.expiry</field>
         <field name="model">hr.employee</field>
         <field name="inherit_id" ref="hr.view_employee_form"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='department_id']" position="after">
                 <field name="project_name"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="sd_projects_view_employee_filter_inherit" model="ir.ui.view">
+        <field name="name">hr.employee.view.form.inherit.filter</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='department_id']" position="before">
+                <field name="project_name" icon="fa-sitemap" enable_counters="1"/>
             </xpath>
         </field>
     </record>
