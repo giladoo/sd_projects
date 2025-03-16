@@ -18,6 +18,7 @@
         'security/ir.model.access.csv',
         'views/views.xml',
         'views/hr_employee_views.xml',
+        'views/hr_work_location_views.xml',
 
     ],
     'assets':{

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_hr_work_location_form" model="ir.ui.view">
+        <field name="name">hr.hr_work_location_form_view</field>
+        <field name="model">hr.work.location</field>
+        <field name="inherit_id" ref="hr.hr_work_location_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="before">
+                <field name="project_name"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
