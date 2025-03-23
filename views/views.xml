@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
+    <record id="projects_list" model="ir.ui.view">
+        <field name="name">Project List</field>
+        <field name="model">sd_projects.projects</field>
+        <field name="arch" type="xml">
+            <list>
+                <header>
+                    <button string="UUID" name="update_uuid" type="object" class="btn bg-danger-light" groups="base.group_system"></button>
+                </header>
+                <field name="name"/>
+                <field name="uu_id" groups="base.group_system" readonly="1"/>
+                <field name="project_no"/>
+                <field name="client"/>
+                <field name="start_date"/>
+            </list>
+        </field>
+    </record>
+
     <record id="projects_form" model="ir.ui.view">
         <field name="name">Project Form</field>
         <field name="model">sd_projects.projects</field>
@@ -7,22 +24,25 @@
             <form>
                 <sheet>
 
-                        <div class="oe_title">
-                            <h1>
-                                <field name="name"/>
-                            </h1>
-                        </div>
-                <group>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
                     <group>
-                        <field name="project_no"/>
-                        <field name="client"/>
-                        <field name="start_date"/>
+                        <group>
+                            <field name="uu_id" groups="base.group_system" readonly="0"/>
+                            <field name="project_no"/>
+                            <field name="client"/>
+                            <field name="start_date"/>
+                        </group>
                     </group>
-                </group>
                 </sheet>
+                <chatter/>
             </form>
         </field>
     </record>
+
     <record id="project_window_action" model="ir.actions.act_window">
         <field name="name">Projects</field>
         <field name="res_model">sd_projects.projects</field>
