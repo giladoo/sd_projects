@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'SD Projects',
-    'version': '17.0.1.0.0',
+    'version': '17.0.1.0.1',
     'description': '',
     'category': 'Services',
     'summary': """ Projects, Clients and Contractors """,

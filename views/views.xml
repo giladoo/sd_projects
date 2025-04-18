@@ -6,7 +6,6 @@
         <field name="arch" type="xml">
             <form>
                 <sheet>
-
                         <div class="oe_title">
                             <h1>
                                 <field name="name"/>
@@ -23,14 +22,99 @@
             </form>
         </field>
     </record>
+
+    <record id="employee_projects_list" model="ir.ui.view">
+        <field name="name">Employee Projects List</field>
+        <field name="model">sd_projects.employees</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="project"/>
+                <field name="employee"/>
+                <field name="plan"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="employee_projects_form" model="ir.ui.view">
+        <field name="name">Employee Projects Form</field>
+        <field name="model">sd_projects.employees</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="employee" readonly="1"/>
+                        <field name="project" required="1"/>
+                        <field name="plan"/>
+
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="employee_projects_search" model="ir.ui.view">
+        <field name="name">Employee Projects Search</field>
+        <field name="model">sd_projects.employees</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="employee"/>
+                <field name="project"/>
+
+                <searchpanel>
+                    <field name="project" expand="1" select="multi" icon="fa-gear" enable_counters="1"/>
+                    <field name="employee" expand="1" select="multi" icon="fa-users" enable_counters="1"/>
+                </searchpanel>
+            </search>
+        </field>
+    </record>
+
+<!--    -->
+
+    <record id="employee_projects_list_one" model="ir.ui.view">
+        <field name="name">Employee Projects List</field>
+        <field name="model">sd_projects.employees</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="project"/>
+                <field name="employee" readonly="1"/>
+                <field name="plan"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="employee_projects_search_one" model="ir.ui.view">
+        <field name="name">Employee Projects Search One</field>
+        <field name="model">sd_projects.employees</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="project"/>
+            </search>
+        </field>
+    </record>
+
+
+
     <record id="project_window_action" model="ir.actions.act_window">
         <field name="name">Projects</field>
         <field name="res_model">sd_projects.projects</field>
         <field name="view_mode">tree,form</field>
     </record>
+
+    <record id="employee_projects_window_action" model="ir.actions.act_window">
+        <field name="name">Projects</field>
+        <field name="res_model">sd_projects.employees</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+<!--    <menuitem-->
+<!--            id="projects_nemu"-->
+<!--            name="Projects"-->
+<!--            action="project_window_action"-->
+<!--    />    -->
     <menuitem
-            id="projects_nemu"
-            name="SD Projects"
-            action="project_window_action"
+            id="employee_projects_nemu"
+            name="Employee Projects"
+              parent="hr.menu_hr_employee_payroll"
+            action="employee_projects_window_action"
     />
 </odoo>
