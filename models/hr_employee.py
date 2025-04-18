@@ -7,12 +7,17 @@ class SdProjectsHrEmployee(models.Model):
 
     project_name = fields.Many2one('sd_projects.projects')
     project = fields.Many2one('sd_projects.employees')
+    project_n = fields.Many2one("sd_projects.projects", compute="_project_n", store=True)
     # document_ids = fields.One2many('sd_hr_documents.attachments',
     #                                'employee_id',
     #                                string="documents")
     projects_count = fields.Integer(compute='_compute_projects_count',
                                     string='Projects',
                                     help='Count of projects.')
+    @api.onchange('project')
+    def _project_n(self):
+        for rec in self:
+            rec.project_n = rec.project.project
 
     def _compute_projects_count(self):
         for rec in self:

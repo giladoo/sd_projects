@@ -16,6 +16,7 @@
                 <field name="project" domain="[('employee', '=', id)]"
                        context="{'default_employee': id}"
                        options="{'no_create': True, 'no_open': True, }"/>
+                <field name="project_n" readonly="0" invisible="1" />
             </xpath>
         </field>
     </record>
@@ -29,7 +30,8 @@
 <!--                <field name="project_name" icon="fa-sitemap" enable_counters="1"/>-->
 <!--            </xpath>-->
             <xpath expr="//field[@name='department_id']" position="before">
-                <field name="project" icon="fa-sitemap" enable_counters="1"/>
+                <field name="project_n" icon="fa-sitemap"  enable_counters="1"/>
+<!--                <field name="project_n" icon="fa-sitemap" enable_counters="1"/>-->
             </xpath>
             <xpath expr="//field[@name='department_id']" position="after">
                 <field name="work_location_id" icon="fa-building-o" enable_counters="1"/>
