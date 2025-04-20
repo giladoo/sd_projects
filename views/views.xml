@@ -8,6 +8,7 @@
                 <header>
                     <button string="UUID" name="update_uuid" type="object" class="btn bg-danger-light" groups="base.group_system"></button>
                 </header>
+                <field name="sequence" widget="handle"/>
                 <field name="name"/>
                 <field name="uu_id" groups="base.group_system" readonly="1"/>
                 <field name="project_no"/>

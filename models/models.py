@@ -8,11 +8,13 @@ class SdProjectsProjects(models.Model):
     _description = 'Projects'
     _inherit = ['mail.thread']
 
+
     name = fields.Char(required=True, translate=True, tracking=True)
     project_no = fields.Char(tracking=True)
     client = fields.Many2one('res.partner',tracking=True)
     start_date = fields.Date(tracking=True)
     uu_id = fields.Char(default= lambda self: uuid.uuid4().hex)
+    sequence = fields.Integer(default=100)
 
 
     def update_uuid(self):
